@@ -1,6 +1,6 @@
 # Updated as of Aug 16, 2017
 # Install FROM UBUNTU IMAGE
-FROM ubuntu:16.04
+FROM ubuntu:22.04
 
 #Author of the Docker File
 # MAINTAINER Pictolearn Note: MAINTAINER has been deprecated for LABEL, 
@@ -9,13 +9,13 @@ LABEL "Maintainer"="Pictolearn"
 
 # RUN COMMAND BASICALLY runs the command in the terminal and creates an image.
 # Install all the updates for UBUNTU
-RUN apt-get update && apt-get install -y python-software-properties software-properties-common
+RUN apt-get update && apt-get install -y python3.6
 
 # Install all the updates for UBUNTU
 RUN apt-get install -y iputils-ping
 
 # Adds the repository where JDK 8 can be obtained for UBUNTU
-RUN add-apt-repository ppa:openjdk-r/ppa
+# RUN add-apt-repository ppa:openjdk-r/ppa
 
 # INSTALL THE VI EDITOR AND MYSQL-CLIENT
 RUN apt-get install -y vim
@@ -36,7 +36,8 @@ ADD . /usr/local/docker-git-hello-world
 
 # AFTER YOU HAVE MOVED ALL THE FILES GO AHEAD CD into the directory and run mvn assembly.
 # Maven assembly will package the project into a JAR FILE which can be executed
-RUN cd /usr/local/docker-git-hello-world && mvn --add-modules assembly:assembly
+RUN cd /usr/local/docker-git-hello-world && mvn assembly:single
+
 
 #THE CMD COMMAND tells docker the command to run when the container is started up from the image. In this case we are
 # executing the java program as is to print Hello World.

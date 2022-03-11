@@ -12,7 +12,6 @@ import java.util.List;
 
 public class HelloWorldPingTest {
 
-        // private final PrintStream standardOut = System.out;
         private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
         @Before
