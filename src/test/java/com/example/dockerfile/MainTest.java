@@ -10,7 +10,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.List;
 
-public class HelloWorldPingTest {
+public class MainTest {
 
         private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
@@ -21,7 +21,7 @@ public class HelloWorldPingTest {
 
         @Test
         public void mainTest() throws Exception {
-                HelloWorldPing.main(null);
+                Main.main(null);
                 String line = new String(outputStreamCaptor.toByteArray());
                 Iterable<String> myIterator = Splitter.on(System.getProperty("line.separator")).split(line);
                 List<String> myList = Lists.newArrayList(myIterator);

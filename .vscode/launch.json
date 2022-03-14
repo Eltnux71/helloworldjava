@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "com.example.dockerfile.Main",
+            "projectName": "helloworldjava"
+        },
+        {
             "name": "Java",
             "type": "java",
             "request": "launch",

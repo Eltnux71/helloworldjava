@@ -41,4 +41,4 @@ RUN cd /usr/local/docker-git-hello-world && mvn assembly:single
 
 #THE CMD COMMAND tells docker the command to run when the container is started up from the image. In this case we are
 # executing the java program as is to print Hello World.  
-CMD ["java", "-cp", "/usr/local/docker-git-hello-world/target/helloworldjava-1.0-SNAPSHOT-jar-with-dependencies.jar", "com.example.dockerfile"]
+#CMD ["java", "-cp", "/usr/local/docker-git-hello-world/target/helloworldjava-1.0-SNAPSHOT-jar-with-dependencies.jar", "com.example.dockerfile"]

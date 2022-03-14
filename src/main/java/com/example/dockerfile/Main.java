@@ -1,6 +1,6 @@
 package com.example.dockerfile;
 
-public class HelloWorldPing {
+public class Main {
 
 	public static void main(String[] args) throws Exception {
 		for (int i = 0; i < Util.TIMES_TO_REPEAT; i++) {
